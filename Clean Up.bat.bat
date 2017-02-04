@@ -1,0 +1,7 @@
+FOR /F "tokens=*" %%G IN ('DIR /B /AD /S bin') DO RMDIR /S /Q "%%G"
+FOR /F "tokens=*" %%G IN ('DIR /B /AD /S obj') DO RMDIR /S /Q "%%G"
+FOR /F "tokens=*" %%G IN ('DIR /B /AD /S App_Readme') DO RMDIR /S /Q "%%G"
+FOR /F "tokens=*" %%G IN ('DIR /B /A /S *.suo') DO DEL /S /Q "%%G"
+FOR /F "tokens=*" %%G IN ('DIR /B /A /S *.user') DO DEL /S /Q "%%G"
+FOR /F "tokens=*" %%G IN ('DIR /B /A /S *.bak') DO DEL /S /Q "%%G"
+FOR /F "tokens=*" %%G IN ('DIR /B /A /S *.meta*') DO DEL /S /Q "%%G"
