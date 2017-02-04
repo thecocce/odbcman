@@ -14,8 +14,8 @@ Windows utility which imports and exports Datasources defined by odbcad32.exe
 
 ## Importing DSN from file
 * `odbcman --import  --file [ExportFileName] [-Name [NewName]]`
-* `odbcman -i  -file [ExportFileName] [-Name [NewName]]`
-* `odbcman /i  /file [ExportFileName] [-Name [NewName]]`
+* `odbcman -i  -f [ExportFileName] [-Name [NewName]]`
+* `odbcman /i  /f [ExportFileName] [-Name [NewName]]`
 
 ## Remove
 * `odbcman --remove [DSN Name]`
