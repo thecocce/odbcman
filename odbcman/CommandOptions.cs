@@ -10,7 +10,7 @@ namespace odbcman
 {
     class CommandOptions
     {
-        [Option('l', "list", Required = false, HelpText = "lists defined DSNs", MetaValue ="true")]
+        [Option('l', "list", Required = false, HelpText = "lists defined DSNs", MetaValue = "true")]
         public bool IsListOperation
         {
             get;
@@ -50,6 +50,15 @@ namespace odbcman
         {
             get;
             set;
+
+        }
+
+        [Option('h', "help", Required = false, HelpText = "Print help")]
+        public bool IsHelpOperation
+        {
+            get;
+            set;
+
         }
 
         [HelpOption]
@@ -58,8 +67,22 @@ namespace odbcman
             // this without using CommandLine.Text
             var usage = new StringBuilder();
             usage.AppendLine(string.Format("odbcman {0}", Assembly.GetExecutingAssembly().GetName().Version));
-            usage.AppendLine("Read user manual for usage instructions...");
+            usage.AppendLine(formatHelpLine('l', "list", "lists defined DSNs"));
+            usage.AppendLine(formatHelpLine('e', "export", "Specifies export operation"));
+            usage.AppendLine(formatHelpLine('i', "import", "Specifies Import operation"));
+            usage.AppendLine(formatHelpLine('f', "file", "Input file to read"));
+            usage.AppendLine(formatHelpLine('n', "name", "Input file to read"));
+            usage.AppendLine(formatHelpLine('x', "remove", "Name of DS to export,remove, create by import."));
+            usage.AppendLine(formatHelpLine('?', "help", "Print this help"));
+
             return usage.ToString();
+
+        }
+
+        string formatHelpLine(char shortOption, string longOption, string helpText)
+        {
+            return string.Format("-{0}\t--{1}\t\t\t{2}", shortOption, longOption, helpText);
         }
     }
 }
+

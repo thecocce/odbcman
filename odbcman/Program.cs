@@ -8,14 +8,21 @@ namespace odbcman
     {
         public static void Main(string[] args)
         {
-            CommandOptions options = new CommandOptions();
-            Parser parser = new Parser();
-            parser.ParseArguments(args, options);
-            HandleOptions(options);
+
+            Program intance = new Program();
+            intance.HandleOptions(args);
+            Console.ReadKey();
         }
 
-        private static void HandleOptions(CommandOptions options)
+
+
+        public void HandleOptions(string[] args)
         {
+            CommandOptions options = new CommandOptions();
+
+            Parser parser = new Parser();
+            parser.ParseArguments(args, options);
+
             if (options == null)
             {
                 options.GetUsage();
@@ -28,16 +35,19 @@ namespace odbcman
                     Console.WriteLine("Is ExportDSN Operation");
                 else if (options.IsListOperation)
                     ListODBCsources();
-               else if (options.IsRemoveDSNOperation)
+                else if (options.IsRemoveDSNOperation)
                     Console.WriteLine("Is RemoveDSN Operation");
                 else
                     options.GetUsage();
-
-
             }
         }
 
-        private static void ListODBCsources()
+        private string formatODBCDSNForListCommand(string serverName, string driverName)
+        {
+            return string.Format("{0,32}\t\t{1}", serverName, driverName);
+        }
+
+        private void ListODBCsources()
         {
             int envHandle = 0;
             const int SQL_FETCH_NEXT = 1;
@@ -54,7 +64,7 @@ namespace odbcman
                             driverName, driverName.Capacity, ref driverLen);
                 while (ret == 0)
                 {
-                    Console.WriteLine(serverName + System.Environment.NewLine + driverName);
+                    Console.WriteLine(formatODBCDSNForListCommand(serverName.ToString(), driverName.ToString()));
                     ret = NativeMethods.SQLDataSources(envHandle, SQL_FETCH_NEXT, serverName, serverName.Capacity, ref snLen,
                             driverName, driverName.Capacity, ref driverLen);
                 }
