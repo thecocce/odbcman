@@ -5,6 +5,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "odbcman", "odbcman\odbcman.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "odbcmantests", "odbcmantests\odbcmantests.csproj", "{310D6A61-4E2B-41A5-8EAD-E77BEE47CA02}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F047B22B-6284-4AF7-A4B8-E99E2E0D8DBB}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,16 +30,16 @@ Global
 		{097273A0-415B-4375-B5B3-7A7FEA81B946}.Release|Mixed Platforms.Build.0 = Release|x86
 		{097273A0-415B-4375-B5B3-7A7FEA81B946}.Release|x86.ActiveCfg = Release|x86
 		{097273A0-415B-4375-B5B3-7A7FEA81B946}.Release|x86.Build.0 = Release|x86
-		{310D6A61-4E2B-41A5-8EAD-E77BEE47CA02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{310D6A61-4E2B-41A5-8EAD-E77BEE47CA02}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{310D6A61-4E2B-41A5-8EAD-E77BEE47CA02}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{310D6A61-4E2B-41A5-8EAD-E77BEE47CA02}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{310D6A61-4E2B-41A5-8EAD-E77BEE47CA02}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{310D6A61-4E2B-41A5-8EAD-E77BEE47CA02}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{310D6A61-4E2B-41A5-8EAD-E77BEE47CA02}.Release|Any CPU.Build.0 = Release|Any CPU
-		{310D6A61-4E2B-41A5-8EAD-E77BEE47CA02}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{310D6A61-4E2B-41A5-8EAD-E77BEE47CA02}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{310D6A61-4E2B-41A5-8EAD-E77BEE47CA02}.Release|x86.ActiveCfg = Release|Any CPU
+		{310D6A61-4E2B-41A5-8EAD-E77BEE47CA02}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{310D6A61-4E2B-41A5-8EAD-E77BEE47CA02}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{310D6A61-4E2B-41A5-8EAD-E77BEE47CA02}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{310D6A61-4E2B-41A5-8EAD-E77BEE47CA02}.Debug|x86.ActiveCfg = Debug|x86
+		{310D6A61-4E2B-41A5-8EAD-E77BEE47CA02}.Debug|x86.Build.0 = Debug|x86
+		{310D6A61-4E2B-41A5-8EAD-E77BEE47CA02}.Release|Any CPU.ActiveCfg = Release|x86
+		{310D6A61-4E2B-41A5-8EAD-E77BEE47CA02}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{310D6A61-4E2B-41A5-8EAD-E77BEE47CA02}.Release|Mixed Platforms.Build.0 = Release|x86
+		{310D6A61-4E2B-41A5-8EAD-E77BEE47CA02}.Release|x86.ActiveCfg = Release|x86
+		{310D6A61-4E2B-41A5-8EAD-E77BEE47CA02}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
