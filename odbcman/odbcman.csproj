@@ -66,6 +66,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandOptions.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="DSNModel.cs" />
+    <Compile Include="HammingWeightHelper.cs" />
     <Compile Include="NativeMethods.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
